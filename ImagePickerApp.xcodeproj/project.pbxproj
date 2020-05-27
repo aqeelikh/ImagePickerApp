@@ -13,6 +13,7 @@
 		C5275042247E98B200CA79DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5275040247E98B200CA79DB /* Main.storyboard */; };
 		C5275044247E98B300CA79DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5275043247E98B300CA79DB /* Assets.xcassets */; };
 		C5275047247E98B300CA79DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5275045247E98B300CA79DB /* LaunchScreen.storyboard */; };
+		C56A2825247ED23C00120463 /* TBTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56A2824247ED23C00120463 /* TBTextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C5275043247E98B300CA79DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5275046247E98B300CA79DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5275048247E98B300CA79DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C56A2824247ED23C00120463 /* TBTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBTextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		C5275039247E98B200CA79DB /* ImagePickerApp */ = {
 			isa = PBXGroup;
 			children = (
+				C56A2823247ED21500120463 /* TextFieldDelegates */,
 				C527503A247E98B200CA79DB /* AppDelegate.swift */,
 				C527503C247E98B200CA79DB /* SceneDelegate.swift */,
 				C527503E247E98B200CA79DB /* ViewController.swift */,
@@ -65,6 +68,14 @@
 				C5275048247E98B300CA79DB /* Info.plist */,
 			);
 			path = ImagePickerApp;
+			sourceTree = "<group>";
+		};
+		C56A2823247ED21500120463 /* TextFieldDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				C56A2824247ED23C00120463 /* TBTextFieldDelegate.swift */,
+			);
+			path = TextFieldDelegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 			files = (
 				C527503F247E98B200CA79DB /* ViewController.swift in Sources */,
 				C527503B247E98B200CA79DB /* AppDelegate.swift in Sources */,
+				C56A2825247ED23C00120463 /* TBTextFieldDelegate.swift in Sources */,
 				C527503D247E98B200CA79DB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate, UITextFieldDelegate {
 
     //MARK: Setup Outlets
     @IBOutlet weak var imagePickerView: UIImageView!
@@ -16,10 +16,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     @IBOutlet weak var bottomTextField: UITextField!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     
-
+    let topTextFieldDelegate = TBTextFieldDelegate()
+    let bottomTextFieldDelegate = TBTextFieldDelegate()
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.topTextField.delegate = self.topTextFieldDelegate
+        self.bottomTextField.delegate = self.bottomTextFieldDelegate
+        
         
         // MARK: Configer Textfield Attributes
         let memeTextAttributes: [NSAttributedString.Key: Any] = [
@@ -28,7 +34,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
             NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
             NSAttributedString.Key.strokeWidth:  -3.5
         ]
-    
+
         topTextField.defaultTextAttributes = memeTextAttributes
         bottomTextField.defaultTextAttributes = memeTextAttributes
         
@@ -64,13 +70,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         
     }
     
-    
-
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imagePickerView.image = image
             picker.dismiss(animated: true, completion: nil)
         }
     }
+    
+    
+
 }
 
