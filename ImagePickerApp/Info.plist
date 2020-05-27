@@ -53,6 +53,14 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Use image from camera to apply text editing to the captured image</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Read image from photo library</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Write image to photo library</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
