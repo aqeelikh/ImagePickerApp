@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -36,8 +36,12 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1T3-RV-hPW">
                                 <rect key="frame" x="0.0" y="51" width="414" height="44"/>
                                 <items>
-                                    <navigationItem title="Meme Editer" id="wPO-l6-sgN">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="action" id="XVd-oa-jIY"/>
+                                    <navigationItem title="MemeMe 1.0" id="wPO-l6-sgN">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="action" id="XVd-oa-jIY">
+                                            <connections>
+                                                <action selector="shareImage:" destination="BYZ-38-t0r" id="wdK-bd-cS0"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="F3X-al-ouN">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="waG-Ke-Moy">
                                                 <rect key="frame" x="346" y="7" width="48" height="30"/>
@@ -96,6 +100,9 @@
                         <outlet property="bottomTextField" destination="CZT-XL-Ccr" id="4nz-j1-Q0n"/>
                         <outlet property="cameraButton" destination="rst-a1-rRL" id="SaE-sJ-r4F"/>
                         <outlet property="imagePickerView" destination="LJ0-MF-Cqr" id="kNv-9r-3Dr"/>
+                        <outlet property="navBar" destination="1T3-RV-hPW" id="Hff-jC-7xv"/>
+                        <outlet property="shareButton" destination="XVd-oa-jIY" id="otp-Zy-IPg"/>
+                        <outlet property="toolBar" destination="bRw-oZ-SOs" id="fj4-0e-z64"/>
                         <outlet property="topTextField" destination="KAs-qD-7dw" id="WiO-iN-q8n"/>
                     </connections>
                 </viewController>

@@ -16,7 +16,6 @@ class TBTextFieldDelegate: NSObject, UITextFieldDelegate  {
     func textFieldShouldBeginEditing(_ textField: UITextField)  -> Bool {
         if flag {
             textField.text = ""
-            textField.text = ""
             flag = false
         }
         return true
