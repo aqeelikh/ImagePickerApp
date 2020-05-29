@@ -32,6 +32,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         
         configureUI()
     }
+    @IBAction func cancelButton(_ sender: Any) {
+        imagePickerView.image = nil
+        configureUI()
+    }
     
     
     override func viewWillAppear(_ animated: Bool) {
