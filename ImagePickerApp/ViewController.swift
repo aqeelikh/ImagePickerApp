@@ -30,12 +30,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         self.topTextField.delegate = self.topTextFieldDelegate
         self.bottomTextField.delegate = self.bottomTextFieldDelegate
         
-        configureUI()
+        configureUI(tf: topTextField, text: "Top")
+        configureUI(tf: bottomTextField, text: "Bottom")
+        
     }
     @IBAction func cancelButton(_ sender: Any) {
         imagePickerView.image = nil
-        configureUI()
-    }
+        configureUI(tf: topTextField, text: "Top")
+        configureUI(tf: bottomTextField, text: "Bottom")    }
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,23 +55,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     }
 
     @IBAction func pickAnImageFromAlbum(_ sender: Any) {
-        
-        // MARK: Image Picker controller setup
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
-        present(imagePicker, animated: true, completion: nil)
-        
-        
+        chooseImageFromCameraOrPhoto(source: UIImagePickerController.SourceType.photoLibrary)
     }
     
     @IBAction func pickAnImageFromCamera(_ sender: Any) {
-        
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .camera
-        present(imagePicker, animated: true, completion: nil)
-        
+        chooseImageFromCameraOrPhoto(source: UIImagePickerController.SourceType.camera)
+    }
+    
+    // MARK: Image Picker controller setup
+    func chooseImageFromCameraOrPhoto(source: UIImagePickerController.SourceType) {
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        pickerController.allowsEditing = true
+        pickerController.sourceType = source
+        present(pickerController, animated: true, completion: nil)
     }
     
     
@@ -159,29 +158,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     }
     
     // MARK: - ConfigureUI ViewController Function
-    func configureUI() {
+    func configureUI(tf: UITextField, text: String) {
         
         // MARK: configure Textfield Attributes
-             let memeTextAttributes: [NSAttributedString.Key: Any] = [
+        tf.defaultTextAttributes = [
                  NSAttributedString.Key.strokeColor: UIColor.black,
                  NSAttributedString.Key.foregroundColor: UIColor.white ,
                  NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
                  NSAttributedString.Key.strokeWidth:  -3.5
              ]
-             
-             //MARK: Configer Outlets
-             
-             shareButton.isEnabled = false
-
-             topTextField.defaultTextAttributes = memeTextAttributes
-             bottomTextField.defaultTextAttributes = memeTextAttributes
-             
-             topTextField.text = "Top"
-             bottomTextField.text = "Bottom"
-             
-             topTextField.textAlignment =  NSTextAlignment.center
-             bottomTextField.textAlignment =  NSTextAlignment.center
         
+             shareButton.isEnabled = false
+             tf.text = text
+             tf.textAlignment =  NSTextAlignment.center
     }
 }
 
