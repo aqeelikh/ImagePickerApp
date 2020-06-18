@@ -26,7 +26,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         super.viewDidLoad()
         
         //MARK: SetupDelegates
-        
         self.topTextField.delegate = self.topTextFieldDelegate
         self.bottomTextField.delegate = self.bottomTextFieldDelegate
         
@@ -37,11 +36,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     @IBAction func cancelButton(_ sender: Any) {
         imagePickerView.image = nil
         configureUI(tf: topTextField, text: "Top")
-        configureUI(tf: bottomTextField, text: "Bottom")    }
+        configureUI(tf: bottomTextField, text: "Bottom")
+        self.navigationController?.popToRootViewController(animated: true)
+    }
     
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        self.navigationController?.navigationBar.isHidden = true
+        self.tabBarController?.tabBar.isHidden = true
         //MARK: Sign up to be notified when the keyboard appears
         super.viewWillAppear(animated)
         subscribeToKeyboardNotifications()
@@ -52,6 +54,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
 
         super.viewWillDisappear(animated)
         unsubscribeFromKeyboardNotifications()
+        self.navigationController?.navigationBar.isHidden = false
+        self.tabBarController?.tabBar.isHidden = false
     }
 
     @IBAction func pickAnImageFromAlbum(_ sender: Any) {
@@ -133,9 +137,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     
     //MARK: Create Meme Object
     
-    func save() {
-            // Create the meme
-        _ = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memedImage: generateMemedImage())
+    func save() {        
+       let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memedImage: generateMemedImage())
+        
+            // Add it to the memes array in the Application Delegate
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     func generateMemedImage() -> UIImage {
@@ -172,5 +181,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
              tf.text = text
              tf.textAlignment =  NSTextAlignment.center
     }
+    
 }
 
