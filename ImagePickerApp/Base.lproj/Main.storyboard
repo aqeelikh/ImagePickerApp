@@ -230,7 +230,7 @@
                                 <rect key="frame" x="20" y="133" width="374" height="640"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="KAs-qD-7dw">
-                                <rect key="frame" x="205" y="130" width="4" height="70"/>
+                                <rect key="frame" x="10" y="130" width="394" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="s69-VB-gdb"/>
                                 </constraints>
@@ -260,7 +260,7 @@
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="CZT-XL-Ccr">
-                                <rect key="frame" x="205" y="706" width="4" height="70"/>
+                                <rect key="frame" x="10" y="706" width="394" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="OJS-Bt-rxB"/>
                                 </constraints>
@@ -294,11 +294,15 @@
                             <constraint firstItem="1T3-RV-hPW" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0491071" id="EI9-zE-snS"/>
                             <constraint firstItem="1T3-RV-hPW" firstAttribute="centerX" secondItem="LJ0-MF-Cqr" secondAttribute="centerX" id="KP2-LU-vKp"/>
                             <constraint firstItem="LJ0-MF-Cqr" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="N8u-LB-OEW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KAs-qD-7dw" secondAttribute="trailing" constant="10" id="UYk-Ba-sza"/>
                             <constraint firstItem="LJ0-MF-Cqr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cXq-9f-wvc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CZT-XL-Ccr" secondAttribute="bottom" constant="86" id="dSo-o2-Hzk"/>
                             <constraint firstItem="1T3-RV-hPW" firstAttribute="leading" secondItem="bRw-oZ-SOs" secondAttribute="leading" id="fx3-VF-WAP"/>
+                            <constraint firstItem="KAs-qD-7dw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="hBg-fU-AOb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CZT-XL-Ccr" secondAttribute="trailing" constant="10" id="hTV-2l-KGp"/>
                             <constraint firstItem="1T3-RV-hPW" firstAttribute="centerX" secondItem="CZT-XL-Ccr" secondAttribute="centerX" id="hwP-qh-5GV"/>
                             <constraint firstItem="KAs-qD-7dw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="86" id="jCQ-xb-fN7"/>
+                            <constraint firstItem="CZT-XL-Ccr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="kVW-3y-kmZ"/>
                             <constraint firstItem="bRw-oZ-SOs" firstAttribute="top" secondItem="LJ0-MF-Cqr" secondAttribute="bottom" constant="45" id="mWO-SZ-tH1"/>
                             <constraint firstItem="KAs-qD-7dw" firstAttribute="centerX" secondItem="bRw-oZ-SOs" secondAttribute="centerX" id="mcQ-aZ-aVg"/>
                             <constraint firstItem="1T3-RV-hPW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sMP-f4-2O5"/>
