@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-2047" y="306"/>
         </scene>
-        <!--Meme Table-->
+        <!--Sent Memes-->
         <scene sceneID="0xR-Pk-Bjg">
             <objects>
                 <viewController id="VZB-BI-9Rp" customClass="SentMemesTableViewController" customModule="ImagePickerApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -90,7 +90,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3NO-Dk-sir"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Meme Table" id="YhH-wj-mye">
+                    <navigationItem key="navigationItem" title="Sent Memes" id="YhH-wj-mye">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="k6B-Q0-JWf">
                             <connections>
                                 <action selector="CreateMeme:" destination="VZB-BI-9Rp" id="ii5-6f-qUl"/>
@@ -108,7 +108,6 @@
         <!--Meme Detail View Controller-->
         <scene sceneID="aCk-jb-fi7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fU1-pP-fkU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="DetailViewController" id="Sum-hr-YMI" customClass="MemeDetailViewController" customModule="ImagePickerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="96c-jX-ivI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -133,6 +132,7 @@
                         <outlet property="memeImageView" destination="mx7-fV-lc0" id="TZq-rE-B6d"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fU1-pP-fkU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="114.49275362318842" y="293.97321428571428"/>
         </scene>
@@ -154,7 +154,7 @@
             </objects>
             <point key="canvasLocation" x="-3098" y="-60"/>
         </scene>
-        <!--Meme Collections-->
+        <!--Sent Memes -->
         <scene sceneID="BNB-6h-kAs">
             <objects>
                 <collectionViewController id="eL0-sS-ITC" customClass="SentMemesCollectionViewController" customModule="ImagePickerApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -202,7 +202,7 @@
                             <outlet property="delegate" destination="eL0-sS-ITC" id="AAo-Mg-tzf"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Meme Collections" id="cTC-7g-w9d">
+                    <navigationItem key="navigationItem" title="Sent Memes " id="cTC-7g-w9d">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="bw5-if-DUn">
                             <connections>
                                 <action selector="CreateMeme:" destination="eL0-sS-ITC" id="OYW-eo-mSI"/>
@@ -269,7 +269,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRw-oZ-SOs">
-                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="818" width="414" height="49"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="camera" id="rst-a1-rRL">
                                         <connections>

@@ -65,7 +65,6 @@ class SentMemesCollectionViewController: UICollectionViewController {
     func checkDeviceOrientation(){
            
            if UIDevice.current.orientation.isLandscape {
-               print("isLandscape")
                let space:CGFloat = 1
                let dimension = (view.frame.size.height - (2 * space)) / 4.0
 
@@ -75,7 +74,6 @@ class SentMemesCollectionViewController: UICollectionViewController {
                     
            }
            else if UIDevice.current.orientation.isPortrait {
-              print("isPortrait")
               let space:CGFloat = 3.0
               let dimension = (view.frame.size.width - (2 * space)) / 3.0
 
